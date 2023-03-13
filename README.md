@@ -95,7 +95,7 @@
 4. インプットファイルの作成
 
 
-    > run.param
+    > `run.param`
     ```
     AMBIG_TBL=antibody-antigen-ambig.tbl
     HADDOCK_DIR=PATH/TO/HADDOCK/INSTALLATIONDIR/haddock2.4
@@ -112,6 +112,8 @@
 5. Run
 
     プロジェクトディレクトリ内で以下のコマンドを実行。`run1`ディレクトリが作成される。
+    
+    **haddock2.4はPython2.7上でしか動かないため、`pyenv`などで適切にPythonバージョンを変更する必要がある**
 
     ```
     haddock2.4
@@ -133,3 +135,19 @@
     ```
 
 6. Analyse
+
+    ドッキング計算終了後、以下のコマンドを実行することでHADDOCKスコアが記述された`file.nam_haddock-socre`ファイルが生成される。
+    
+    ```
+    cd run1/structures/it1/water
+    ../../../tools/ana_structures.csh
+    ```
+    
+    `DockQ`でCAPRI由来の生成された複合体のQualityとRMSDが計算できる。
+    
+    **haddock2.4実行環境ではPython2.7になっているためそのまま`DockQ`を実行するとエラーがでる。なので`pyenv`等で事前にPython3に変更する。例えば複合体がまとめられている`water/analysis`ディレクトリ内だけPython3に変更する。**
+    
+    ```
+    DockQ.py complex.pdb reference.pdb
+    ```
+    
