@@ -4,10 +4,17 @@
 
     DOCKING
     └── UNBOUND-BOUND
+            3つのシナリオ
         ├── CDR-Surf
         ├── CDR-Epi9
         ├── Real-interface
-        └── ensemble_average
+        
+            各クラスタリングごとアンサンブル構造が置いてあるディレクトリ
+            ＊＊　5E7B-5E7Fはたしか single はエラーで生成できず
+        ├── ensemble_average,centroid, ...
+        
+        └── その他はドッキング計算に必要な諸々のファイル
+        
 
 
     ├── fugafuga.py
