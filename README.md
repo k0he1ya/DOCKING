@@ -32,3 +32,15 @@
                                     └── ...
         
 # ドッキング計算
+
+## Requirements
+- haddock2.4-2021-05
+- CNS
+- haddock-tools
+- pdb-tools
+- freesasa
+- DockQ
+
+## 前処理
+## RUN
+## Analyze
