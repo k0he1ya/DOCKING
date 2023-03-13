@@ -1,4 +1,4 @@
-# ドッキング結果
+# ドッキング結果（ディレクトリ名：DOCKING）
 
 ## ファイル構成の説明
 
@@ -8,6 +8,11 @@
         ├── CDR-Surf
         ├── CDR-Epi9
         ├── Real-interface
+            ├── BOUND
+            ├── UNBOUND
+            ├── ENSEMBLE
+            ├── ENSEMBLE_average, centroid, ...
+        
         
             各クラスタリングごとアンサンブル構造が置いてあるディレクトリ
             ＊＊　5E7B-5E7Fはたしか single はエラーで生成できず
