@@ -44,11 +44,15 @@
 ## Run
 1. PDBの前処理
 
-    `pdb_delhetatm.py PDB.pdb | pdb_chain.py | pdb_seg.py | pdb_fixinsert.py | pdb_tidy.py > PDB-clean.pdb`
+    `pdb_delhetatm.py PDB-L.pdb | pdb_chain.py | pdb_seg.py | pdb_fixinsert.py | pdb_tidy.py > PDB-L-clean.pdb`
+    
+    `pdb_delhetatm.py PDB-R.pdb | pdb_chain.py | pdb_seg.py | pdb_fixinsert.py | pdb_tidy.py > PDB-R-clean.pdb`
 
 2. SASAの計算
 
-    `freesasa PDB-clean.pdb --format=rsa > PDB.rsa`
+    `freesasa PDB-L-clean.pdb --format=rsa > PDB-L.rsa`
+    
+    `freesasa PDB-R-clean.pdb --format=rsa > PDB-R.rsa`
 
 3. active, passive残基の指定
     
