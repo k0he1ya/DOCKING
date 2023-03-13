@@ -58,14 +58,14 @@
     
     **残基を指定しない場合は空スペースを入れる。そうしないとエラーが発生する**
     
-    通常はエピトープに関する実験的情報がない場合、SASAをpassiveと定義する。`freesasa`でSASAを計算し、40%カットオフで残基をフィルタリングする。
-    自分で任意にactive,passiveを指定しても良い。
-    
     > PDB-L.list　（例）
     ```
     38 40 45 46 69 71 78 80 94 96 141
      
     ```
+    
+    通常はエピトープに関する実験的情報がない場合、SASAをpassiveと定義する。`freesasa`でSASAを計算し、40%カットオフで残基をフィルタリングする。
+    自分で任意にactive,passiveを指定しても良い。
     
     ```
     freesasa PDB-R-clean.pdb --format=rsa > PDB-R.rsa
@@ -78,8 +78,9 @@
     9 10 11 12 21 24 25 34 37 38 40 41 43 45 46 47 53 55 57 58 59 60 84 85
     ```
 
-4. AIRファイルの定義
-
+3. AIRファイルの定義
+    残基数が
+3. AIRファイルの定義
     ```
     active-passive-to-ambig.py PDB-L.list PDB-R.list | sed s/segid/name\ CA\ and\ segid/g | sed s/2.0/3.0/g >antibody-antigen-ambig.tbl
     ```
