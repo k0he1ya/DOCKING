@@ -51,18 +51,8 @@
     ```
     pdb_delhetatm.py PDB-R.pdb | pdb_chain.py | pdb_seg.py | pdb_fixinsert.py | pdb_tidy.py > PDB-R-clean.pdb
     ```
-
-2. SASAの計算
-
-    ```
-    freesasa PDB-L-clean.pdb --format=rsa > PDB-L.rsa
-    ```
     
-    ```
-    freesasa PDB-R-clean.pdb --format=rsa > PDB-R.rsa
-    ```
-
-3. active, passive残基の指定
+2. active, passive残基の指定
 
     active残基は1行目、passive残基は2行目に記述する。
     
@@ -71,17 +61,17 @@
     通常はエピトープに関する実験的情報がない場合、SASAをpassiveと定義する。`freesasa`でSASAを計算し、40%カットオフで残基をフィルタリングする。
     自分で任意にactive,passiveを指定しても良い。
     
-    ```
-    echo " " > PDB-passive.list
-    awk '{if (NF==13 && ($7>40 || $9>40)) printf "%s ",$3; if (NF==14 && ($8>40 || $10>40)) printf "%s ",$4}' PDB.rsa >>PDB-passive.list
-    ```
-    
     > PDB-L.list　（例）
     ```
     38 40 45 46 69 71 78 80 94 96 141
      
     ```
     
+    ```
+    freesasa PDB-R-clean.pdb --format=rsa > PDB-R.rsa
+    echo " " > PDB-R.list
+    awk '{if (NF==13 && ($7>40 || $9>40)) printf "%s ",$3; if (NF==14 && ($8>40 || $10>40)) printf "%s ",$4}' PDB-R.rsa >>PDB-R.list
+    ```
     > PDB-R.list　（例）
     ```
     15 16 17 20 48 49 51 52 54 56
