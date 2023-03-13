@@ -43,13 +43,22 @@
 
 ## Run
 1. PDBの前処理
+
     `pdb_delhetatm.py PDB.pdb | pdb_chain.py | pdb_seg.py | pdb_fixinsert.py | pdb_tidy.py > PDB-clean.pdb`
-3. SASAの計算
+
+2. SASAの計算
+
     `freesasa PDB-clean.pdb --format=rsa > PDB.rsa`
-5. active, passive残基の指定
+
+3. active, passive残基の指定
     
-7. AIRファイルの定義
-8. インプットデータの定義
-9. Run
+
+4. AIRファイルの定義
+
+
+5. インプットデータの定義
+
+
+6. Run
 
 ## Analyze
