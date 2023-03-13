@@ -116,6 +116,7 @@
     **haddock2.4はPython2.7上でしか動かないため、`pyenv`などで適切にPythonバージョンを変更する必要がある**
 
     ```
+    pyenv local 2.7.13
     haddock2.4
     ```
     
@@ -148,6 +149,7 @@
     **haddock2.4実行環境ではPython2.7になっているためそのまま`DockQ`を実行するとエラーがでる。なので`pyenv`等で事前にPython3に変更する。例えば複合体がまとめられている`water/analysis`ディレクトリ内だけPython3に変更する。**
     
     ```
+    pyenv local 3.7.12
     DockQ.py complex.pdb reference.pdb
     ```
     
