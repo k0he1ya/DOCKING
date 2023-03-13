@@ -73,10 +73,10 @@
     awk '{if (NF==13 && ($7>40 || $9>40)) printf "%s ",$3; if (NF==14 && ($8>40 || $10>40)) printf "%s ",$4}' PDB-R.rsa >>PDB-R.list
     ```
     > PDB-R.list　（例）
-    `
+    ```
     15 16 17 20 48 49 51 52 54 56
     9 10 11 12 21 24 25 34 37 38 40 41 43 45 46 47 53 55 57 58 59 60 84 85
-    `
+    ```
 
 3. AIRファイルの定義
 
@@ -94,7 +94,40 @@
 
 4. インプットファイルの作成
 
+    ```
+    AMBIG_TBL=antibody-antigen-ambig.tbl
+    HADDOCK_DIR=PATH/TO/HADDOCK/INSTALLATIONDIR/haddock2.4
+    N_COMP=2
+    PDB_FILE1=PDB-L-clean.pdb
+    PDB_FILE2=PDB-R-clean.pdb
+    PROJECT_DIR=./
+    PROT_SEGID_1=A
+    PROT_SEGID_2=B
+    RUN_NUMBER=1
+    ```
 
-6. Run
 
-## Analyze
+5. Run
+
+    プロジェクトディレクトリ内で以下のコマンドを実行。`run1`ディレクトリが作成される。
+
+    ```
+    haddock2.4
+    ```
+    
+    `run1`ディレクトリ内に移動し、必要があれば　`run.cns`ファイルを編集する。
+    ```
+    cd run1
+    ```
+
+    `run1`ディレクトリ内で以下のコマンドを実行し、ドッキング計算を開始する。
+    ```
+    haddock2.4
+    ```
+    
+    バックグラウンドで実行したい場合は、以下を代わりに実行する。
+    ```
+    haddock2.4 >&haddock.out &
+    ```
+
+6. Analyse
