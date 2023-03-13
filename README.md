@@ -6,12 +6,29 @@
     └── UNBOUND-BOUND
             3つのシナリオ
         ├── CDR-Surf
+            └── ...
         ├── CDR-Epi9
+            └── ...
         ├── Real-interface
             ├── BOUND
+                ├── ...
+                └── run1
+                    ├── ...
+                    └── structures
+                        ├── it0
+                            └── ...
+                        └── it1
+                            ├── ...
+                            └── water
+                                ├── ...
+                                └── analysis (ここに最終的なドッキング結果の構造が入っている。ドッキングスコアで昇順に並んでいる)
+                                    └── ...
             ├── UNBOUND
-            ├── ENSEMBLE
-            ├── ENSEMBLE_average, centroid, ...
+                └── ...
+            ├── ENSEMBLE (ウォード法)
+                └── ...
+            └── ENSEMBLE_average, centroid, ...
+                └── ...
         
         
             各クラスタリングごとアンサンブル構造が置いてあるディレクトリ
@@ -20,11 +37,4 @@
         
         └── その他はドッキング計算に必要な諸々のファイル
         
-
-
-    ├── fugafuga.py
-    ├── hoge.py
-    └── hoge_dir
-        ├── hoge
-        └── hogehoge
 # ドッキング計算
