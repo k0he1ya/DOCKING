@@ -79,14 +79,20 @@
     ```
 
 3. AIRファイルの定義
-    残基数が
-3. AIRファイルの定義
+
+    ```
+    active-passive-to-ambig.py PDB-L.list PDB-R.list >　antibody-antigen-ambig.tbl
+    ```
+ 
+    残基数が多い場合、計算が遅くなる可能性がある。
+    この対策として、拘束をCA-CA原子間のみに限定し、拘束距離を3.0Åに微増する方法がある。
+
     ```
     active-passive-to-ambig.py PDB-L.list PDB-R.list | sed s/segid/name\ CA\ and\ segid/g | sed s/2.0/3.0/g >antibody-antigen-ambig.tbl
     ```
 
 
-5. インプットデータの定義
+4. インプットファイルの作成
 
 
 6. Run
