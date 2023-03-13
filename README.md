@@ -4,7 +4,6 @@
 
 DOCKING
 └── UNBOUND-BOUND
-    ├── ドッキング計算に必要な諸々のファイル
     ├── CDR-Surf
     ├── CDR-Epi9
     ├── Real-interface
