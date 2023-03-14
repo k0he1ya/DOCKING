@@ -4,7 +4,7 @@
 
     DOCKING
     └── UNBOUND-BOUND
-                各クラスタリングごとアンサンブル構造が置いてあるディレクトリ
+            各クラスタリングごとアンサンブル構造が置いてあるディレクトリ
             ＊＊　5E7B-5E7Fはたしか single はエラーで生成できず
         ├── ensemble_average,centroid, ...
          
