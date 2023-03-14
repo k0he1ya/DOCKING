@@ -146,7 +146,7 @@
     
     `DockQ`でCAPRI由来の生成された複合体のQualityとRMSDが計算できる。
     
-    **haddock2.4実行環境ではPython2.7になっているためそのまま`DockQ`を実行するとエラーがでる。なので`pyenv`等で事前にPython3に変更する。例えば複合体がまとめられている`water/analysis`ディレクトリ内だけPython3に変更する。**
+    **haddock2.4実行ディレクトリではPython2.7になっているためそのまま`DockQ`を実行するとエラーがでる。なので`pyenv`等で事前にPython3に変更する。例えば複合体がまとめられている`water/analysis`ディレクトリ内だけPython3に変更する。**
     
     ```
     pyenv local 3.7.12
