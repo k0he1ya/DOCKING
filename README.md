@@ -4,13 +4,12 @@
 
     DOCKING
     └── UNBOUND-BOUND
-            各クラスタリングごとアンサンブル構造が置いてあるディレクトリ
-            ＊＊　5E7B-5E7Fはたしか single はエラーで生成できず
-        ├── ensemble_average,centroid, ...
+            
+        ├── ensemble_average,centroid, ... (各クラスタリングごとアンサンブル構造が置いてあるディレクトリ)
          
         ├──　その他ドッキング計算に必要な諸々のファイル
         
-            3つのシナリオごとにディレクトリを分けている
+            #####3つのシナリオ#####
         ├── CDR-Surf
         ├── CDR-Epi9
         └── Real-interface
